@@ -2,12 +2,13 @@ package com.springboot.restapi.springbootrestapi.dao;
 
 import com.springboot.restapi.springbootrestapi.entity.Employee;
 import org.hibernate.Session;
-import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 
+@Repository
 public class EmployeeDAOImpl implements EmployeeDAO{
     @Autowired
     private EntityManager entityManager;
