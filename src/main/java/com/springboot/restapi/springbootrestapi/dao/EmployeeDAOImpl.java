@@ -14,7 +14,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
     private EntityManager entityManager;
 
     @Override
-    public List<Employee> getAllEmployee(Employee employee) {
+    public List<Employee> getAllEmployees() {
         var session = entityManager.unwrap(Session.class);
 
         var query= session
