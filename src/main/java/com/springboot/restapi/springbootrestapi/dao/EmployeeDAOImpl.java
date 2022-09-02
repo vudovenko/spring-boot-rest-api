@@ -9,7 +9,7 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
-public class EmployeeDAOImpl implements EmployeeDAO{
+public class EmployeeDAOImpl implements EmployeeDAO {
     @Autowired
     private EntityManager entityManager;
 
@@ -17,7 +17,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
     public List<Employee> getAllEmployees() {
         var session = entityManager.unwrap(Session.class);
 
-        var query= session
+        var query = session
                 .createQuery("from Employee", Employee.class);
         var allEmployees = query.getResultList();
 
